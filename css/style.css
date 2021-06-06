@@ -1,0 +1,325 @@
+body{
+    margin:0;
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items :center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.piano{
+    width:1360px;
+    height: 625px;
+    margin: 0px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #1a1a1a;
+    padding: 5px;
+    border-radius: 1px;
+}
+
+.piano-bar{
+    margin-top: 15px;
+    min-width:100%;
+    height:40px;
+    display: flex;
+    justify-content: space-between;
+}
+.piano-bar-left{
+    min-width:26%;
+    height:100%;
+    flex-direction: row;
+}
+
+.piano-bar-mid{
+    min-width:500px;
+    min-height:80px;
+    margin-top: 5px;
+    flex-direction: row;
+    background-color: #282828;  
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #111;
+    display: flex;
+    justify-content: space-between;
+}
+
+.piano-bar-right{
+    min-width:26%;
+    height:100%;
+    flex-direction: row-reverse;
+}
+
+.piano-line-left{
+    width:98%;
+    size:8px;
+    border: none;
+    margin-left: 0px;
+    background-color: rgb(150 138 138 / 23%);
+    padding-top:6px;
+}
+
+.piano-line-right{
+    width:98%;
+    size:8px;
+    border: none;
+    margin-right: 0px;
+    background-color: #968a8a3b;
+    padding-top:6px;
+} 
+
+.piano-bar-mid #off{
+    padding-left: 20px!important;
+    padding-top: 20px!important;
+    font-size:40px;
+    color: #7d7b7b;
+}
+
+.piano-bar-mid #on{
+   visibility: hidden;
+   padding-right: 20px!important;
+   padding-top: 25px!important;
+   font-size:30px;
+   color: #7d7b7b;
+}
+
+.slider {
+    margin-top: 35px;
+    margin-left: -10px;
+    -webkit-appearance: none;
+    width: 175%;
+    height: 12px;
+    border-radius: 5px;
+    background: #7d7b7b;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 35px;
+    border-radius: 5px;
+    background: #7d7b7b;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 15px;
+    height: 35px;
+    border-radius: 5px;
+    background: #7d7b7b;
+    cursor: pointer;
+  }
+
+  .btn1{
+    height: 60%;
+    width: 17%;
+    text-align: center;
+    margin-top: 3%;
+    margin-right: -3%;
+    background-color: #ffffffe3;
+
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px #999;
+  }
+
+  .btn1:hover,#btnOne:hover{
+    background-color: #15c915;
+    color:#ffffff;
+  }
+
+  .btn1:active,#btnOne:active{
+    background-color: #15c915;
+    box-shadow: 0 3px #999;
+    transform: translateY(0.5px);
+  }
+
+  .btn2:hover, #btnTwo:hover{
+    background-color: #0f0f0f;
+    color:white;
+  }
+  
+  .btn2:active,#btnTwo:active{
+    background-color: #0f0f0f;
+    box-shadow: 0 3px #999;
+    transform: translateY(0.5px);
+  }
+
+  .btn2{
+    height: 60%;
+    width: 16%;
+    text-align: center;
+    margin-top: 3%;
+    margin-right: 3%;
+    background-color: #ffffffe3;
+
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px #999;
+  }
+
+  #btnOne{
+    font-size:30px;
+    color: #12f012;
+  }
+
+  #btnTwo{
+    font-size:30px;
+    color: #080808;
+  }
+
+.piano_header{
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.piano_speaker{
+    width: 295px;
+    height: 150px;
+    padding-right: 10px;
+    border-radius: 15px;
+    background: /* CSS pattern galary */
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    box-shadow: 0 0 8px 6px #000000bf;
+}
+
+.piano_interface{
+    width:500px;
+    height:200px;
+    border-radius: 15px;
+    background-color: #282828; 
+    box-shadow: inset 0 0 10px #111;
+    color:white;
+    box-sizing: border-box; 
+    padding-left: 20px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.piano_play-btn{
+    font-size: 15px;
+    padding: 4px 30px;
+    height: 27px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px #999;
+}
+
+.piano_play-btn:hover {background-color: #e8a5a5;}
+
+.piano_play-btn:active {
+  background-color: #ffffff;
+  box-shadow: 0 3px #666;
+  transform: translateY(0.5px);
+}
+
+.piano_song_list{
+    font-size: 15px;
+    width: 150px;
+    height: 27px;
+    padding: 4px 3px;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px #999;
+}
+
+.piano_tempo{
+    font-size: 15px;
+    width:90px;
+    height: 27px;
+    padding: 4px 3px;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px #999;
+}
+
+/* Designing Piano Keyboard */
+
+.piano_keyboard{
+    width: 100%;
+    height:350px;
+    background-color: #000;
+    display: flex;  /* Arranging piano keys in Horizontally (row) */
+    padding-top: 28px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+.piano_key{
+    width:30px;
+    height:100%;
+    padding:0;
+    margin :0 0.5px;
+    background-color: #fff;
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex-grow:1 ; /* it will cover full width of keyboard */
+    text-align: center;
+    border-radius: 0 0 7px 7px; 
+}
+/**
+Black div must be placed between two white div.and position will be 
+relative. & every black key has absolute position.
+*/
+.empty-space{
+    position: relative;
+}
+
+.piano_keys-black{
+    background-color: #000;
+    color:#fff;
+    height:60%;
+    position: absolute;
+    top:0; /* Placing Black key to Top */
+    left:-15px;
+    font-size: 14px;
+}
+
+/* Every black key should be in middle of two white key , so 50% of left white key & 50% of right white key */
+
+.piano_keys-white{
+    padding-top: 130px;
+    font-size: 14px;
+}
+
+.piano_key-playing{
+    background-color:#74b9ff ;
+}

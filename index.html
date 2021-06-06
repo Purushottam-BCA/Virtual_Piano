@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="icon" href="https://mypianonotes.com/wp-content/uploads/2018/04/MyPianoNotes-favicon.png" sizes="32x32" />
+        <title>Piano</title>
+    </head>
+    <body>
+        <div class="piano" id="Piano">
+            <div class="piano-bar">
+                <div class="piano-bar-left"> </div> <!-- Generated via Javascript --> 
+                <div class="piano-bar-mid" id="bar-mid">
+                    <i id="off" class="fas fa-volume-off"></i>
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                    <i id="on" class="fas fa-volume-up"></i>  
+                        <button class="btn1" onclick="colorChange()"><i id="btnOne" class="fas fa-cog"></i>Colorful</button>
+                        <button class="btn2" onclick="colorDefault()"><i id="btnTwo" class="fas fa-cog"></i>Default</button>
+                    </div>
+                <div class="piano-bar-right">  </div>  <!-- Generated via Javascript -->   
+            </div> 
+            <div class="piano_header">
+                <div class="piano_speaker" id="speaker1"> </div> <!-- Created using Css pattern-->
+                <div class="piano_interface" id="interface"> 
+                    <div class="piano_controls"> 
+                        <h4 class="piano_heading">PIANO</h4>
+                        <label> <input type="radio" class="piano_control_option" name="control" value="letterNotes" checked> Letter Notes </label> &nbsp;&nbsp;
+                        <label> <input type="radio" class="piano_control_option" name="control" value="keyboard"> Keyboard</label> &nbsp;&nbsp;
+                        <label> <input type="radio" class="piano_control_option" name="control" value="none"> None </label> 
+                    </div>
+                    <div class="piano_autoplay"> 
+                        <h4 class="piano_heading">AUTOPLAY</h4>
+                        <select class="piano_song_list">
+                            <option value="1">Jingle Bells</option>
+                            <option value="2">Happy Birthday</option>
+                            <option value="3" disabled>Vande Matram</option>
+                        </select>&nbsp;&nbsp;
+                        <label>Tempo :
+                            <select class="piano_tempo">
+                                <option value="1">Slow</option>
+                                <option value="2" selected>Normal</option>
+                                <option value="3">Fast</option>
+                            </select>
+                        </label>&nbsp;&nbsp;
+                        <button class="piano_play-btn">Play</button>
+                    </div> 
+                </div>
+                <div class="piano_speaker" id="speaker2"> </div> <!-- We will create it using gradient-->
+            </div>
+            <div class="piano_keyboard"> </div>   <!-- Generated via Javascript -->         
+        </div>
+
+        <script>
+            function colorChange() {
+                var currId;
+                document.getElementById('Piano').style.backgroundColor = "#de2ad026";
+                for(var i = 1; i <=8; i++)
+                { 
+                    currId = 'Line-left'+i;
+                    document.getElementById(currId).style.backgroundColor = "#3c3232c7";
+                    	           
+                    currId = 'Line-right'+i;
+                    document.getElementById(currId).style.backgroundColor = "#3c3232c7";
+                }
+
+                for(var i = 1; i <=35; i++)
+                { 
+                    currId = 'white'+i;
+                    if(i==1 || i==8 || i==15 || i==22 || i==29)
+                        document.getElementById(currId).style.backgroundColor = "#fe0000";    	           
+                    else if(i==2 || i==9 || i==16 || i==23 || i==30)
+                        document.getElementById(currId).style.backgroundColor = "#ff7f00";
+                    else if(i==3 || i==10 || i==17 || i==24 || i==31)
+                        document.getElementById(currId).style.backgroundColor = "#fcfc00";
+                    else if(i==4 || i==11 || i==18 || i==25 || i==32)
+                        document.getElementById(currId).style.backgroundColor = "#00ff01";
+                    else if(i==5 || i==12 || i==19 || i==26 || i==33)
+                        document.getElementById(currId).style.backgroundColor = "#0000fe";
+                    else if(i==6 || i==13 || i==20 || i==27 || i==34)
+                        document.getElementById(currId).style.backgroundColor = "#8211d3";
+                    else if(i==7 || i==14 || i==21 || i==28 || i==35)
+                        document.getElementById(currId).style.backgroundColor = "#d010b1";
+                }
+                    document.getElementById('speaker1').style.backgroundColor = "#00000070";
+                    document.getElementById('speaker2').style.backgroundColor = "#00000070";
+
+                    document.getElementById('bar-mid').style.backgroundColor = "#444320";
+                    document.getElementById('interface').style.backgroundColor = "#444320";
+
+                    return false;
+                }  
+
+            function colorDefault() {
+                var currId;
+                document.getElementById('Piano').style.backgroundColor = "#1a1a1a";
+                for(var i = 1; i <=8; i++)
+                { 
+                    currId = 'Line-left'+i;
+                    document.getElementById(currId).style.backgroundColor = "#968a8a3b";
+                    	           
+                    currId = 'Line-right'+i;
+                    document.getElementById(currId).style.backgroundColor = "#968a8a3b";
+                }
+
+                for(var i = 1; i <=35; i++)
+                { 
+                    currId = 'white'+i;
+                    document.getElementById(currId).style.backgroundColor = "#fff";
+                }
+                    document.getElementById('speaker1').style.backgroundColor = "#282828";
+                    document.getElementById('speaker2').style.backgroundColor = "#282828";
+
+                    document.getElementById('bar-mid').style.backgroundColor = "#282828";
+                    document.getElementById('interface').style.backgroundColor = "#282828";
+
+                    return false;
+            }
+        </script>
+
+        <script src="js/script.js"></script>
+        
+    </body>
+</html>
